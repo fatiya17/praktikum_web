@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-image: url(bgd.webp);
+        }
+
+        .contact {
+            margin-bottom: 3rem;
+            padding:  3.2rem 2% 1.4rem;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(255, 255, 255);
+        }
+        
+        .contact-in {
+            width: 80%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px 0px #666;
+            justify-content: center;
+        }
+
+        .contact-map {
+            width: 100%;
+            height: auto;
+            flex: 3;
+            padding: 10px;
+        }
+
+        .contact-form {
+            width: 100%;
+            height: auto;
+            flex: 3;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact-map img {
+            width: 100%;
+            height: auto;
+        }
+
+        .contact-form h3 {
+            text-align: center;
+            margin: 10px;
+            color: rgb(55, 92, 116);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .contact-map h3 {
+            background-color: rgb(172, 175, 177);
+            text-align: center;
+            padding: 10px;
+            color: rgb(55, 92, 116);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .contact-form .contact-form-txt {
+            width: 100%;
+            height: 40px;
+            color: #000;
+            border: 1px solid #bcbc;
+            border-radius: 50px;
+            outline: none;
+            margin-bottom: 20px;
+            padding: 15px;
+        } 
+
+        .contact-form-txt::placeholder {
+            color: #aaa;
+        }
+
+        .contact-form-txt-btn {
+         width: 100px;
+         border: none;
+         border-radius: 50px;
+         background-color: rgb(55, 92, 116);
+         color: white;
+         text-transform: uppercase;
+         padding: 10px 0;
+         cursor: pointer;
+         font-size: 15px;
+        }
+
+        .contact-form-txt-btn:hover {
+            background-color: #aaa;
+            color: rgb(55, 92, 116);
+        }
+    </style>
+</head>
+<body>
+    <section id="contact" class="contact">
+        <h2>LOG-IN</h2>
+        <div class="contact-in">
+            <div class="contact-map">
+                <h3>Photo Profil</h3>
+                <img src="user.png" alt="">
+                <input type="file">
+            </div>
+            <div class="contact-form">
+                <h3>Register Now</h3>
+                <form>
+                    <input type="text" placeholder="username" class="contact-form-txt">
+                    <input type="password" placeholder="password" class="contact-form-txt">
+                    <input type="number" placeholder="no hp" class="contact-form-txt">
+                    <input type="email" placeholder="account email" class="contact-form-txt">
+                    <input type="submit" name="Submit" class="contact-form-txt-btn">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

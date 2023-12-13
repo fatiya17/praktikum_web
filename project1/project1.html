@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Assorted Shop</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body{
+            font-family: 'Roboto', sans-serif;
+            background-color: bisque;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
+        }
+
+        .wrapper {
+            display: flex;
+            padding: 17px;
+            width: 100%;
+            height: 35px;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #6e0122;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: row;
+            padding: 15px;
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+        .logo img {
+            width: 160px;
+           
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navigation li {
+            list-style-type: none;
+            padding: 15px;
+            margin: 10px;
+            font-weight: 300;
+        }
+
+        .navigation li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .navigation li a:hover {
+            background-color: bisque; 
+            transition: all .3s ease-in-out;
+            border-radius: 20px;
+            color: rgb(110, 1, 34);
+        }
+
+        .search-box {
+            background-color: bisque;
+            height: 25px;
+            padding: 7px 15px;
+            border-radius: 50px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            background: none;
+            width: 100px;
+        }
+
+        .search-box a {
+            color: white;
+        }
+
+        .hero {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            background-image: url(topi5.jpg);
+        }
+
+
+        .hero .content {
+            padding: 1.4rem 7%;
+            max-width: 60rem;
+        }
+
+        .hero .content h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 50px;
+            color: rgb(255, 216, 216);
+            text-shadow: 3px 2px 4px rgba(1, 1, 3);
+        }
+
+        .hero .content h1 span {
+            color: white;
+        }
+
+        .hero .content p {
+            color: rgb(73, 12, 12);
+            font-size: 20px;
+            margin-top: 1rem;
+            line-height: 1.4;
+            font-weight: 600;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+ 
+
+        .hero .content .buy {
+            background-color: #6b0020;
+            color: white;
+            margin-top: 1rem;
+            display: inline-block;
+            padding: 1rem 1.2rem;
+            font-size: 1.4rem;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .hero .content .buy:hover {
+            background-color: rgb(116, 55, 55);
+            color: rgb(255, 255, 255);
+            transition: all .3s ease-in-out;
+            transform: rotateY(2);
+        }
+
+        .collection {
+            padding: 4.2rem 7% 1.4rem;
+            margin-bottom: 3rem;
+        }
+
+        .collection .row .produk {
+            margin: 10px;
+        }
+
+        .collection h2, .contact h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(110, 1, 34);
+        }
+        .row .produk img {
+           width: 17%;
+           justify-content: space-between;
+           align-content: center;
+           align-items: center;
+           margin: 36px;
+           border: .4rem solid rgb(116, 55, 55);
+           border-radius: 50%;
+        }
+
+        table {
+            border: .3rem solid rgb(116, 55, 55);
+            border-radius: 20px;
+            padding: 0;
+            margin: 0;
+            background-color: rgb(231, 195, 195);
+            width: 100%;
+        }
+
+        table tr td p {
+            margin: 10px;
+            padding: 5px;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 15px;
+        }
+
+        table tr td p a {
+            width: 200px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin: 50px;
+            text-decoration: none;
+            background-color: rgb(156, 7, 7);
+            border-radius: 20px;
+            color: #fff;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            align-items: center;
+        }
+
+        table tr td p a:hover {
+            background-color: rgb(19, 88, 19);
+            transition: all .3s ease-in-out;
+        }
+
+        table tr td p span {
+            color: rgb(116, 55, 55);
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .contact {
+            margin-bottom: 3rem;
+            padding:  3.2rem 2% 1.4rem;
+        }
+
+        .contact-in {
+            width: 70%;
+            height: auto;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px 0px #666;
+            justify-content: center;
+        }
+
+        .contact-map {
+            width: 100%;
+            height: auto;
+            flex: 3;
+            padding: 10px;
+        }
+
+        .contact-form {
+            width: 100%;
+            height: auto;
+            flex: 2;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact-form iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .contact-form h3 {
+            margin: 10px;
+            color: rgb(116, 55, 55);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .contact-form .contact-form-txt {
+            width: 100%;
+            height: 40px;
+            color: #000;
+            border: 1px solid #bcbc;
+            border-radius: 50px;
+            outline: none;
+            margin-bottom: 20px;
+            padding: 15px;
+        } 
+
+        .contact-form-txt::placeholder {
+            color: #aaa;
+        }
+
+        .contact-form form input, textarea {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .contact-form .contact-form-textarea {
+            width: 100%;
+            height: 130px;
+            color: #000;
+            border: 1px solid #bcbc;
+            border-radius: 30px;
+            outline: none;
+            margin-bottom: 20px;
+            padding: 15px;
+        } 
+
+        .contact-form-txt-btn {
+         width: 100px;
+         border: none;
+         border-radius: 50px;
+         background-color: rgb(116, 55, 55);
+         color: bisque;
+         text-transform: uppercase;
+         padding: 10px 0;
+         cursor: pointer;
+         font-size: 15px;
+        }
+    
+        footer {
+            background-color: rgb(110, 1, 34);
+            text-align: center;
+            padding: 1rem 0 3rem;
+            margin-top: 3rem;
+        }
+
+        footer .socials {
+            padding: 1rem 0;
+        }
+
+        footer .socials a {
+            color: #fff;
+            margin: 1rem;
+        }
+
+        footer .socials a:hover, footer .links a:hover {
+            color: rgb(128, 86, 86);
+        }
+
+        footer .links {
+            margin-bottom: 1.4rem;
+        }
+        footer .links a {
+            color: #fff;
+            padding: 0.7rem 1rem;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        footer .creadit {
+            font-size: 0.8rem;
+            color: rgb(128, 86, 86);
+        }
+
+        footer .creadit a {
+            font-weight: 700;
+            color: rgb(128, 86, 86);
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="wrapper">
+            <div class="brand">
+                <div class="logo"><img src="csfly2a.png" alt=""></div>
+            </div>
+            <ul class="navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collection" class="active">Collection</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="search">
+                <a href="#" id="search"><i data-feather="search"></i></a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="hero" id="home">
+        <div class="content">
+            <h1>The Best
+                <span>Casual Stuff</span>
+            </h1>
+            <p>Reduce your carbon footprint in style</p>
+            <a href="buy.html" class="buy">Buy Now</a>
+        </div>
+    </div>
+
+    <!--collection start-->
+    <section class="collection" id="collection">
+        <h2>Collection</h2>
+        <div class="row">
+            <div class="produk">
+                <img src="breton hat.jpg" alt="">
+                <img src="panama hat.jpg" alt="">
+                <img src="visor cap.jpg" alt="">
+                <img src="trilby hat.jpg" alt="">
+            </div>
+            <table>
+            <tr>
+                <td>
+                    <p><span>Breton hat</span>
+                        <br><br>
+                       Deskripsi: Breton Hat adalah simbol gaya klasik dengan bentuk bundar dan tepi lebar yang memberikan sentuhan elegan. Terbuat dari bahan berkualitas tinggi, nyaman dan tahan lama.
+                    <br>Harga: Rp 300.000,-
+                    <br><br>
+                    <a href="buy.html">BUY</a>
+                    </p></td>
+                <td>
+                    <p><span>Panama hat</span>
+                        <br><br>
+                        Deskripsi: Panama Hat adalah kombinasi sempurna antara gaya dan kenyamanan, terbuat dari serat alami Toquilla yang memberikan sirkulasi udara optimal. Cocok untuk aktivitas luar ruangan dan liburan musim panas.
+                        <br>Harga: Rp 450.000,-
+                        <br><br>
+                        <a href="buy.html">BUY</a>
+                    </p>
+                </td>
+                <td>
+                    <p><span>Vicor Cap</span>
+                        <br><br>
+                        Deskripsi: Vicor Cap adalah topi sporty yang menunjukkan keberanian dan ketangguhan. Ringan, tahan lama, dan memberikan perlindungan maksimal dari sinar matahari. Cocok untuk gaya kasual.
+                        <br>Harga: Rp 200.000,-
+                        <br><br>
+                        <a href="buy.html">BUY</a>
+                    </p>
+                </td>
+                <td>
+                    <p><span>Tribly hat</span>
+                        <br><br>
+                        Deskripsi: Trilby Hat adalah aksen mode penuh karakter dengan bentuk rendah dan pita elegan. Terbuat dari bahan berkualitas tinggi untuk gaya anggun dan menarik.
+                        <br>Harga: Rp 350.000,-
+                        <br><br>
+                        <a href="buy.html">BUY</a>
+                    </p>
+                </td>
+            </tr>
+            </table>
+        </div>
+    </section>
+<!--collectin 2-->
+    <section class="collection" id="collection">
+        <div class="row">
+            <div class="produk">
+                <img src="bowler-hat.jpg" alt="">
+                <img src="beanie.jpg" alt="">
+                <img src="baseball hat.jpg" alt="">
+                <img src="top hat.jpg" alt="">
+            </div>
+            <table>
+            <tr>
+                <td>
+                    <p><span>Bowler Hat</span>
+                        <br><br>
+                        Deskripsi: Bowler hat, juga dikenal sebagai derby hat, memiliki bulatan yang rendah dan dudukan yang rata. Biasanya terbuat dari bulu atau wol felt dengan bentuk yang khas.
+                    <br>Harga: Rp 350.000,-
+                    <br><br>
+                    <a href="buy.html">BUY</a>
+                    </p></td>
+                <td>
+                    <p><span>Beanie Hat</span>
+                        <br><br>
+                        Deskripsi: Beanie hat adalah topi yang terbuat dari bahan rajutan dan cocok untuk cuaca dingin. Biasanya tidak memiliki pinggiran dan dikenakan dengan cara ditarik ke bawah, menutupi telinga.
+                        <br>Harga: Rp 150.000,-
+                        <br><br>
+                        <a href="buy.html">BUY</a>
+                    </p>
+                </td>
+                <td>
+                    <p><span>Baseball Hat</span>
+                        <br><br>
+                        Deskripsi: Baseball hat adalah topi dengan bentuk dasar yang terinspirasi dari topi olahraga baseball. Terbuat dari kain atau katun dengan pinggiran datar dan panel bagian depan yang kaku.
+                        <br>Harga: Rp 400.000,-
+                        <br><br>
+                        <a href="buy.html">BUY</a>
+                    </p>
+                </td>
+                <td>
+                    <p><span>Top Hat</span>
+                        <br><br>
+                        Deskripsi: Top hat adalah topi formal dengan mahkota tinggi dan pinggiran datar. Biasanya terbuat dari kulit, felt, atau satin dan digunakan pada acara formal atau kostum tertentu.
+                        <br>Harga: Rp 550.000,-
+                        <br><br>
+                        <a href="buy.html">BUY</a>
+                    </p>
+                </td>
+            </tr>
+            </table>
+        </div>
+    </section>
+    <!--collection end-->
+
+    <!--contact start-->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <div class="contact-in">
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126907.08080621553!2d106.71967660529933!3d-6.283929461828453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1ec2422b0b3%3A0x39a0d0fe47404d02!2sJakarta%20Selatan%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1702009921406!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-form">
+                <h3>Contact Us</h3>
+                <form>
+                    <input type="text" placeholder="Your name" class="contact-form-txt">
+                    <input type="email" placeholder="Your email" class="contact-form-txt">
+                    <textarea placeholder="Message" class="contact-form-textarea"></textarea>
+                    <input type="submit" name="Submit" class="contact-form-txt-btn">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--footer start-->
+    <footer>
+        <div class="socials">
+            <a href="https://www.instagram.com/dambelsbru_/"> <i data-feather="instagram"></i>
+            <a href="mailto:fatiyalabibah@gmail.com"> <i data-feather="mail"></i>
+            <a href="https://www.facebook.com/sttterpadunurulfikri"> <i data-feather="facebook"></i>
+            </a>
+        </div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#product">Product</a>
+            <a href="#collection">Collection</a>
+            <a href="#contact">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+        <div class="creadit">
+            <p>Created by <a href="">Fatiya Labibah</a>
+             | &copy; 2023</p>
+        </div>
+    </footer>
+    <!--footer end-->
+    <script>
+        feather.replace();
+      </script>
+</body>
+</html>
