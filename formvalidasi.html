@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+</head>
+<body>
+    <h1>Form Validasi</h1>
+    <form onsubmit="Validasi()">
+        <table>
+        <tr>
+            <td><label for="username">Nama Pelanggan </label></td>
+            <td>:  <input type="text" name="username" id="username"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email </label></td>
+            <td>:  <input type="email" name="email" id="email"></td>
+        </tr>
+        <tr>
+            <td><label for="jam">Jam Keberangkatan </label></td>
+            <td>:  <select name="jam" id="jam">
+            <option value="empat">04.00</option>
+            <option value="lima">05.00</option>
+            <option value="enam">06.00</option>
+            <option value="tujuh">07.00</option>
+            <option value="delapan">08.00</option>
+            <option value="sembilan">09.00</option>
+            <option value="sepuluh">10.00</option>
+            <option value="sebelas">11.00</option>
+            <option value="duabelas">12.00</option>
+        </select></td>
+        </tr>
+        <tr>
+            <td><label for="tujan">Tujuan Keberangkatan</label></td>
+            <td>
+                :  <select name="tujuan" id="tujuan">
+                    <option value="JKT">Jakarta</option>
+                    <option value="BGR">Bogor</option>
+                    <option value="DPK">Depok</option>
+                    <option value="SMR">Semarang</option>
+                    <option value="BDG">Bandung</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="tiket">Jumlah Tiket</label></td>
+            <td>:  
+                <select name="tiket" id="tiket">
+                    <option value="satu">1</option>
+                    <option value="dua">2</option>
+                    <option value="tiga">3</option>
+                    <option value="empat">4</option>
+                    <option value="lima">5</option>
+                    <option value="enam">6</option>
+                    <option value="tujuh">7</option>
+                    <option value="delapan">8</option>
+                    <option value="sembilan">9</option>
+                    <option value="sepuluh">10</option>
+                </select>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+        </table>
+    </form>
+    
+
+    <script>
+        function Validasi() {
+            //tangkep username id
+            let user = document.getElementById("username").value;
+            //tangkap password id
+            let mail = document.getElementById("email").value;
+            //tangkep jam keberangkatan
+            let jam = document.getElementById("jam").value;
+            //tangkep tujuan keberangkatan
+            let kota = document.getElementById("tujuan").value;
+            //tangkep jumlah tiket
+            let jumlah = document.getElementById("tiket").value;
+            if (user === "Fatiya Labibah" && mail === "fatiyalabibah17@gmail.com" && jam == "empat" && kota == "BDG" && jumlah == "lima"){
+                alert("Tervalidasi");
+            } else {
+                alert("Tidak Tervalidasi");
+            }
+        }
+    </script>
+</body>
+</html>
