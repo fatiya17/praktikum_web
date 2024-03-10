@@ -1,0 +1,77 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height:100%;
+    background-image: url(../latar.png);
+    background-position:top
+    background-size: auto;
+    display: block;}
+
+.logo{
+    float: left;
+    margin-left: 46px;
+    padding: 0px 30px;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: slategrey;
+}
+
+.nav{
+    position: relative;
+    float: none;
+    top: 100%;
+    right: 90%%;
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    width: 100%;
+}
+
+.nav-ul{
+    list-style: none;
+    cursor: pointer;
+    float: left;
+    margin-left: 600px;
+    padding: 5px 15px;
+}
+
+.nav ul li{
+    list-style: none;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 15px;
+}
+
+.header{
+    float: left;
+    margin-left: 30px;
+    padding: 0px 36px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(150, 166, 182);
+}
+
+.gambar{
+    position: relative;
+    margin-left: 80px;
+    display: flex;
+    border-collapse: 100px;
+}
+
+.des{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: 600px;
+    float: left;
+    padding: 0px 36px;
+}
