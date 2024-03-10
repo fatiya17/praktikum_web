@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 2</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+
+        }
+
+        .nav1 {
+            flex: 1;
+            background-color: rgb(204, 0, 255);
+        }
+
+        .nav2 {
+            flex: 3;
+            background-color: antiquewhite;
+        }
+
+        .header {
+            background-color: rgb(238, 255, 0);
+            padding: 10px;
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        .nav3 {
+            display: flex;
+        }
+
+        .article {
+            flex: 3;
+            background-color: white;
+            height: 80vh;
+
+        }
+
+        .aside {
+            flex: 1;
+            background-color: aqua;
+            height: 80vh;
+        }
+
+        .footer {
+            background-color: rgb(238, 255, 0);
+            padding: 10px;
+            text-align: center;
+            padding-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav1">Nav</div>
+        <!-- main -->
+        <div class="nav2">
+            <!-- baris1 -->
+            <div class="header">Header</div>
+            <!-- baris2 -->
+            <div class="nav3">
+                <div class="article">Article</div>
+                <div class="aside">Aside</div>
+            </div>
+            <div class="footer">Footer</div>
+        </div>
+    </div>
+</body>
+
+</html>
